@@ -70,7 +70,7 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: black;
   color: var(--text-color);
 }
 
@@ -231,7 +231,6 @@ img {
 /*=============== HOME ===============*/
 .home__img {
   width: 250px;
-  position: absolute;
   top: -16rem;
   right: 1.5rem;
 }
@@ -424,7 +423,7 @@ img {
   inset: 0;
   margin-right: auto;
   margin-left: auto;
-  top: -3rem;
+  top: -0rem;
 }
 
 .products__content {
@@ -444,7 +443,7 @@ img {
   right: .5rem;
   bottom: .5rem;
   padding: .5rem;
-  border-radius: .35rem;
+  border-radius: .30rem;
 }
 
 /*=============== FOOTER ===============*/
