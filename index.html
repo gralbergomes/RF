@@ -1,89 +1,112 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="assets/img/rfdev.png" type="image/x-icon">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/rfdev.png" type="image/x-icon">
 
-        <!--=============== REMIX ICONS ===============-->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>RF Shadow</title>
-    </head>
-    <body>
-        <!--=============== HEADER ===============-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">
-                    <img src="assets/img/rfdev.png" alt="">
-                </a>
+    <title>RF Shadow</title>
+</head>
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/rfdev.png" alt="">
+            </a>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#inicio" class="nav__link active-link">Inicio</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#rate" class="nav__link">Informações</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#regras" class="nav__link">Regras</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#download" class="nav__link">Download</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#Cash" class="nav__link">Cash</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#GameCP" class="nav__link">GameCP</a>
-                        </li>
-                    </ul>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#inicio" class="nav__link active-link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#rate" class="nav__link">Informações</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#regras" class="nav__link">Regras</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#download" class="nav__link">Download</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#Cash" class="nav__link">Cash</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#GameCP" class="nav__link">GameCP</a>
+                    </li>
+                </ul>
 
-                    <div class="nav__close" id="nav-close">
-                        <i class="ri-close-line"></i>
-                    </div>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
                 </div>
+            </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-function-line"></i>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="inicio">
+            <div class="home__container container grid">
+                <div>
+                    <img src="assets/img/ACC50.png" alt="" class="home__img">
                 </div>
-            </nav>
-        </header>
-
-        <main class="main">
-            <!--=============== HOME ===============-->
-            <section class="home section" id="inicio">
-                <div class="home__container container grid">
-                    <div>
-                        <img src="assets/img/ACC50.png" alt="" class="home__img">
+                
+                <div class="home__data">
+                    <div class="home__header">
+                        <h1 class="home__title">Shadow</h1>
+                        <h2 class="home__subtitle">RF Online</h2>
                     </div>
-                    
-                    <div class="home__data">
-                        <div class="home__header">
-                            <h1 class="home__title">Shadow</h1>
-                            <h2 class="home__subtitle">RF Online</h2>
+
+                    <!--=============== TIMER ===============-->
+                    <section class="timer section" id="timer-section">
+                        <div class="timer__container">
+                            <h2 class="timer__title">Lançamento em</h2>
+                            <div id="timer" class="timer__content">
+                                <div class="time-box">
+                                    <span id="days" class="time-value">00</span>
+                                    <span class="time-label">Dias</span>
+                                </div>
+                                <div class="time-box">
+                                    <span id="hours" class="time-value">00</span>
+                                    <span class="time-label">Horas</span>
+                                </div>
+                                <div class="time-box">
+                                    <span id="minutes" class="time-value">00</span>
+                                    <span class="time-label">Minutos</span>
+                                </div>
+                                <div class="time-box">
+                                    <span id="seconds" class="time-value">00</span>
+                                    <span class="time-label">Segundos</span>
+                                </div>
+                            </div>
                         </div>
+                    </section>
 
-                        <div class="home__footer">
-                            
-                            <p class="home__description">Descubra uma nova experiência em RF Online: Onde batalhas épicas e aventuras inesquecíveis esperam por você!
-                            </p>
-                            <a href="#" class="button button--flex">
-                                <span class="button--flex">
-                                    Participe do nosso Discord
-                                </span>
-                            </a>
-                        </div>
+                    <div class="home__footer">
+                        <a href="#" class="button button--flex">
+                            <span class="button--flex">
+                                Participe do nosso Discord
+                            </span>
+                        </a>
                     </div>
                 </div>
-            </section>
-            
+            </div>
+        </section>
+    </main>
+        
             <!--=============== SPONSOR ===============-->
             <section class="sponsor section">
                 <div class="sponsor__container container grid">
@@ -95,37 +118,37 @@
             </section>
 
             <!--=============== SPECS ===============-->
-            <section class="specs section grid" id="rate">
-                <h2 class="section__title section__title-gradient">Informações</h2>
+<section class="specs section grid" id="rate">
+    <h2 class="section__title section__title-gradient">Informações</h2>
 
-                <div class="specs__container container grid">
-                    <div class="specs__content grid">
-                        <div class="specs__data">
-                            <h3 class="specs__title">LV Max: 50</h3>
-                            <span class="specs__subtitle">35x Free / 40x Premium</span>
-                        </div>
-    
-                        <div class="specs__data">
-                            <h3 class="specs__title">PT/Skill GM</h3>
-                            <span class="specs__subtitle">Novas animações de Skills</span>
-                        </div>
-    
-                        <div class="specs__data">
-                            <h3 class="specs__title">Sell Rate: 2,5kk</h3>
-                            <span class="specs__subtitle">Novos pack de farm 255 unidades</span>
-                        </div>
+    <div class="specs__container container grid">
+        <div class="specs__content grid">
+            <div class="specs__data">
+                <h3 class="specs__title">LV Max: 50</h3>
+                <span class="specs__subtitle">35x Free / 40x Premium</span>
+            </div>
 
-                        <div class="specs__data">
-                            <h3 class="specs__title">Mine Rate: 3x Free / 5x Premium</h3>
-                            <span class="specs__subtitle">All mapas habilitados, armas originais, danos balanceados, novos spots de farm, quests reduzidas, classes originais balanceadas, cross classe ON.<br></span>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <img src="assets/img/Bell50.png" alt="" class="specs__img">
-                    </div>
-                </div>
-            </section>
+            <div class="specs__data">
+                <h3 class="specs__title">PT/Skill GM</h3>
+                <span class="specs__subtitle">Novas animações de Skills</span>
+            </div>
+
+            <div class="specs__data">
+                <h3 class="specs__title">Sell Rate: 2,5kk</h3>
+                <span class="specs__subtitle">Novos pack de farm 255 unidades</span>
+            </div>
+
+            <div class="specs__data">
+                <h3 class="specs__title">Mine Rate: 3x Free / 5x Premium</h3>
+                <span class="specs__subtitle">All mapas habilitados, armas originais, danos balanceados, novos spots de farm, quests reduzidas, classes originais balanceadas, cross classe ON.<br></span>
+            </div>
+        </div>
+
+        <div>
+            <img src="assets/img/Bell50.png" alt="" class="specs__img">
+        </div>
+    </div>
+</section>
 
             <!--=============== CASE ===============-->
             <section class="case section grid" id="regras">

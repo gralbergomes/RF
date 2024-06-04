@@ -82,3 +82,27 @@ sr.reveal(`.specs__data, .discount__animate`,{origin: 'left', interval: 100})
 sr.reveal(`.specs__img, .discount__img`,{origin: 'right'})
 sr.reveal(`.case__img`,{origin: 'top'})
 sr.reveal(`.case__data`)
+
+function updateTimer() {
+    const targetDate = new Date('2024-07-12T20:00:00').getTime(); // Data e hora alvo
+    const now = new Date().getTime();
+    const timeRemaining = targetDate - now;
+
+    if (timeRemaining < 0) {
+        document.getElementById('timer').innerHTML = "EXPIRADO";
+        return;
+    }
+
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+    document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+}
+
+setInterval(updateTimer, 1000);
+updateTimer(); // Chame a função imediatamente para evitar o atraso inicial

@@ -766,3 +766,45 @@ img {
     margin-top: 9rem;
   }
 }
+
+/* Timer Styles */
+.timer {
+  padding-top: 2rem; /* Ajuste esta linha para alterar a margem superior */
+}
+
+.timer__container {
+  background-color: black;
+  padding: -5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.timer__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.timer__content {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.time-label {
+  font-size: 1rem;
+  color: #666;
+}
