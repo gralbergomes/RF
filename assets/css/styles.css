@@ -913,66 +913,26 @@ img {
 
 /* Estilos para o footer */
 .footer {
-  background-color: #1f1f1f;
+  background-color: black;
   color: #ffffff;
-  padding: 30px 0;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-}
-
-.footer__copy {
-  margin-bottom: 10px;
-}
-
-.footer__copy-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.footer__copy-link:hover {
-  color: #f2c94c;
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin: 0 15px;
-  color: #ffffff;
-  font-size: 24px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #f2c94c;
-  transform: translateY(-3px);
-}
-
-/* Estilos para o footer */
-.footer {
-  background-color: #1f1f1f;
-  color: #ffffff;
-  padding: 10px 0;
+  padding: 40px 0; /* Aumentei o padding para dar mais espaço */
 }
 
 .footer__content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 .footer__left,
 .footer__right {
   flex: 1;
+  margin: 0 15px; /* Margens horizontais para separar os conteúdos */
 }
 
 .social-icons {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .social-icons a {
@@ -989,11 +949,12 @@ img {
 }
 
 .footer__links {
-  margin-bottom: 20px;
+  margin-top: 20px; /* Espaço acima dos links */
+  margin-bottom: 20px; /* Espaço abaixo dos links */
 }
 
 .footer__list {
-  text-align: start;
+  list-style: none;
   padding: 0;
 }
 
@@ -1012,7 +973,7 @@ img {
 }
 
 .footer__contact {
-  margin-top: 125px;
+  margin-top: -40px; /* Espaço acima da seção de contato */
 }
 
 .footer__title {
@@ -1041,8 +1002,11 @@ img {
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
+  display: block;
+  margin-top: -95px; /* Espaço acima do link de direitos autorais */
 }
 
 .footer__copy-link:hover {
   color: #f2c94c;
 }
+
