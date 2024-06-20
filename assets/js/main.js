@@ -84,7 +84,7 @@ sr.reveal(`.case__img`,{origin: 'top'})
 sr.reveal(`.case__data`)
 
 function updateTimer() {
-    const targetDate = new Date('2024-07-12T20:00:00').getTime(); // Data e hora alvo
+    const targetDate = new Date('2024-07-05T20:00:00').getTime(); // Data e hora alvo
     const now = new Date().getTime();
     const timeRemaining = targetDate - now;
 
