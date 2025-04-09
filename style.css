@@ -162,7 +162,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15px; /* Menos espaço para ficar próximo dos botões */
+  margin-top: 20px; /* Menos espaço para ficar próximo dos botões */
 }
 
 .music-button img {
