@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RF SHADOW PVP</title>
-  <link rel="icon" href="/imagens/RF SHADOW LOGO ROXA.png" type="image/png" />
+  <link rel="icon" href="/imagens/Screenshot_5.png" type="image/png" />
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,13 @@
     <img src="imagens/RF SHADOW LOGO ROXA.png" alt="RF Shadow" class="hero__logo" />
     <h1 class="hero__title">Em Breve ...</h1>
     <p class="hero__subtitle">O lado sombrio do Rising Force Online</p>
-
+    <div class="music-container">
+        <div class="music-button">
+          <img id="playPauseBtn" src="imagens/Botão Musica.png" alt="Play Music" />
+          <audio id="backgroundMusic" src="music/Elden Ring Main Theme (The Final Battle) ｜ EPIC VERSION.mp3" loop></audio>
+        </div>
+        <p class="music-text">Música Tema RF SHADOW</p>
+      </div>
     <div class="button-group">
       <a href="https://discord.gg/A8wp3U7VhA" class="button button--glow" target="_blank">Discord</a>
       <a href="https://chat.whatsapp.com/GR9C6GVCFhqL2R4D4qTXRs" class="button button--glow" target="_blank">Grupo do Whatsapp</a>
@@ -71,5 +77,24 @@
       detectRetina: true
     });
   </script>
+<script>
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    let isPlaying = false;
+  
+    // Define o volume inicial (0.0 até 1.0)
+    backgroundMusic.volume = 0.2; // 50% de volume
+  
+    playPauseBtn.addEventListener('click', () => {
+      if (!isPlaying) {
+        backgroundMusic.play();
+        isPlaying = true;
+      } else {
+        backgroundMusic.pause();
+        isPlaying = false;
+      }
+    });
+  </script>
+  
 </body>
 </html>
