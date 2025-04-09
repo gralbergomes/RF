@@ -2,6 +2,8 @@
    FONTE & RESET
 ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&display=swap');
+
 
 * {
   margin: 0;
@@ -240,4 +242,23 @@ body {
   .button-group {
     gap: 10px;
   }
+}
+
+.music-text {
+  font-size: 18px;
+  color: #c084fc;
+  font-family: 'Orbitron', sans-serif; /* Fonte bonita */
+  letter-spacing: 1px;
+  display: inline-block;
+  animation: sway-stronger 1.5s ease-in-out infinite;
+}
+
+/* Animação com balanço maior */
+@keyframes sway-stronger {
+  0%   { transform: rotate(0deg); }
+  20%  { transform: rotate(10deg); }
+  40%  { transform: rotate(-10deg); }
+  60%  { transform: rotate(10deg); }
+  80%  { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
 }
