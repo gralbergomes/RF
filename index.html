@@ -1,283 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="assets/img/rfdev.png" type="image/x-icon">
-    <!--=============== REMIX ICONS ===============-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>RF Shadow</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RF SHADOW PVP</title>
+  <link rel="icon" href="/imagens/RF SHADOW LOGO ROXA.png" type="image/png" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 </head>
-
 <body>
-    <!--=============== HEADER ===============-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">
-            </a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#inicio" class="nav__link active-link">Inicio</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#rate" class="nav__link">Informações</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#regras" class="nav__link">Regras</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#download" class="nav__link">Download</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#Cash" class="nav__link">Cash e Premium</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="https://rfshadow.rfocp.net/" class="nav__link" target="_blank">GameCP</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="https://rfshadow.rfocp.net/#register" class="nav__link" target="_blank">Registro</a>
-                    </li>
-                </ul>
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="ri-function-line"></i>
-                <!-- Remova o ícone aqui -->
-            </div>
-        </nav>
-    </header>
+  <!-- Fundo com partículas -->
+  <div id="particles-js"></div>
 
-    <main class="main">
-        <!--=============== HOME ===============-->
-        <section class="home section" id="inicio">
-            <div class="home__container container grid">
-                <div>
-                    <img src="assets/img/ACC50.png" alt="Home Image" class="home__img">
-                </div>
-                <div class="home__data">
-                    <div class="home__header">
-                        <img src="assets/img/RF_Shadow_Wallpaper-removebg-preview.png" alt="RF Shadow Logo" class="home__logo">
-                    </div>
-                    <a href="https://discord.gg/rfshadow" class="button button--flex" target="_blank">
-                        <span class="button--flex">
-                            Participe do nosso Discord
-                        </span>
-                    </a>
-                </div>
-                    <!--=============== TIMER ===============-->
-                            <div class="home__footer">
-                                <br>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <section class="sponsor section">
-               <div class="sponsor__container container grid">
-                   <a href="https://facebook.com/rfshadow" target="_blank" class="sponsor__button"><img src="assets/img/Facebook.png" alt="Facebook"></a>
-                   <a href="https://discord.gg/rfshadow" target="_blank" class="sponsor__button"><img src="assets/img/discord-logo.png" alt="Discord"></a>
-                   <a href="https://twitch.tv/joguerfshadow" target="_blank" class="sponsor__button"><img src="assets/img/Twitch.png" alt="Twitch"></a>
-                   <a href="https://www.youtube.com/@RFShadow" target="_blank" class="sponsor__button"><img src="assets/img/Youtube.png" alt="YouTube"></a>
-                   <a href="https://chat.whatsapp.com/GR9C6GVCFhqL2R4D4qTXRs" target="_blank" class="sponsor__button"><img src="assets/img/logo-whatsapp-colorida-vertical-1024.png" alt="YouTube"></a>
-               </div>
-           </section>
-        </section>
-         <!--=============== SPONSOR ===============-->
-        <!--=============== SPECS ===============-->
-        <section class="specs section grid" id="rate">
-            <h2 class="section__title section__title-gradient">Informações</h2>
-            <div class="specs__container container grid">
-                <div class="specs__content grid">
-                    <div class="specs__data">
-                        <h3 class="specs__title">LV Max: 50 (Prox CAP em 3 meses)</h3>
-                        <span class="specs__subtitle">35x Free / 40x Premium</span>
-                    </div>
-                    <div class="specs__data">
-                        <h3 class="specs__title">PT/Skill GM</h3>
-                        <span class="specs__subtitle">Novas animações de Skills</span>
-                    </div>
-                    <div class="specs__data">
-                        <h3 class="specs__title">Sell Rate: 2kk</h3>
-                        <span class="specs__subtitle">Pack de 99 unidades</span>
-                    </div>
-                    <div class="specs__data">
-                        <h3 class="specs__title">Mine Rate: 3x Free / 5x Premium</h3>
-                        <span class="specs__subtitle">Todos mapas habilitados, armas originais, danos balanceados, quests reduzidas e exclusivas.<br></span>
-                    </div>
-                    <div class="specs__data">
-                        <h3 class="specs__title">Itens Ooiginais e sistema de Skins</h3>
-                        <span class="specs__subtitle">Armas e Set não serão destruidos na talicação, apenas resetados ou falha<br></span>
-                    </div>
-                    <div class="specs__data">
-                        <h3 class="specs__title">Dual Client Ativo</h3>
-                        <span class="specs__subtitle">2 Conta Free / 2 Contas Premium<br></span>
-                    </div>
-                    <div class="specs__data">
-                        <h3 class="specs__title">Sistema de Criadores de Conteúdo e Streamer</h3>
-                        <span class="specs__subtitle">Recompensas semanais para os streamers e premio para melhores videos<br></span>
-                    </div>
-                    <div class="specs__data">
-                        <h3 class="specs__title">Donation System</h3>
-                        <span class="specs__subtitle">Compre seu cash ou premium e receba na hora.<br></span>
-                    </div>
-                </div>
-                <div>
-                    <img src="assets/img/Bell50.png" alt="Specs Image" class="specs__img">
-                </div>
-            </div>
-        </section>
-        <!--=============== CASE ===============-->
-        <section class="case section grid" id="regras">
-            <h2 class="section__title section__title-gradient">Regras</h2>
-            <div class="case__container container grid">
-                <div>
-                    <img src="assets/img/Cora50.png" alt="Case Image" class="case__img">
-                </div>
-                <div class="case__data">
-                    <p class="case__description">
-                        <a class="footer__list">
-                            <li class="footer__item">Respeite a todos.
-                            <li class="footer__item">Tenham sempre bom senso e usem sua inteligência.
-                            <li class="footer__item">É estritamente proibido promover qualquer tipo de discurso de ódio, como racismo, sexismo, homofobia, e etc.
-                            <li class="footer__item">É Proibido uso de programas ilegais.
-                            <li class="footer__item">Proibido usar o MAU para esconder torre.
-                            <li class="footer__item">Membros do conselho não será permitido anunciar ou vender sua conta durante o tempo de conselho, caso acontecer será removido do conselho e a raça ficará com um conselho ate terminar a semana.
-                            <li class="footer__item">Torre nos portais, teleportes e respaw de K1 são proibidas.
-                            <li class="footer__item">Proibido divulgar ou promover qualquer outro Servidor dentro do RF Shadow
-                                </li>
-                        </a>
-                        <br>
-                    <a href="https://discord.com/channels/1239282803930042389/1239282986709418016" class="button button--flex" target="_blank">
-                        <i class="ri-information-line button__icon"></i> Mais informações
-                    </a>
-                </div>
-            </div>
-        </section>
-            <!--=============== DISCOUNT ===============-->
-            <section class="discount section" id="download">
-                <div class="discount__container container grid">
-                    <div class="discount__animate">
-                        <h2 class="discount__title">Baixe nosso Client<br></h2>
-                        <p class="discount__description">Faça o registro no GameCP e ganhe 2 dia de Premium</p>
-                        <a href="https://drive.google.com/file/d/1-hwb90pv6VLMu2Z_hGIHPn_W5nZ2N7D7/view" class="button button--flex" target="_blank">
-                            <i>Google Drive</i>
-                        </a>
-                        <a href="https://rfshadow.rfocp.net/#register" class="button button--flex" target="_blank">
-                            <i>Registro</i>
-                        </a>
-                    </div>
-                    <img src="assets/img/googledrive.png" alt="" class="discount__img">
-                </div>
-            </section>
+  <!-- Vídeo de Fundo -->
+  <video autoplay muted loop class="video-bg" playsinline>
+    <source src="videos/Cinematic Background HDMINITOOL_a167d03d-2b29-4a23-898d-1f833210338e.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
 
-            <!--=============== PRODUCTS ===============-->
-            <section class="products section" id="Cash">
-                <h2 class="section__title section__title-gradient products__line">
-                    Cash &<br> Premium
-                </h2>
-            
-                <div class="products__container container grid">
-                    <article class="products__card">
-                        <div class="products__content">
-                            <img src="assets/img/Premium tiket.png" alt="" class="products__img">
-                            <h3 class="products__title">Premium 30 Dias</h3>
-                            <span class="products__price">$30</span>
-                            <a href="https://rfshadow.dpainel.shop/?add-to-cart=70" class="button button--flex products__button" target="_blank">
-                                <i class="ri-shopping-bag-line button__icon"></i>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="products__card">
-                        <div class="products__content">
-                            <img src="assets/img/gold.png" alt="" class="products__img">
-                            <h3 class="products__title">Cash 20k</h3>
-                            <span class="products__price">$20</span>
-                            <a href="https://rfshadow.dpainel.shop/?add-to-cart=68" class="button button--flex products__button" target="_blank">
-                                <i class="ri-shopping-bag-line button__icon"></i>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="products__card">
-                        <div class="products__content">
-                            <img src="assets/img/gold.png" alt="" class="products__img">
-                            <h3 class="products__title">Cash 50k</h3>
-                            <span class="products__price">$50</span>
-                            <a href="https://rfshadow.dpainel.shop/?add-to-cart=69" class="button button--flex products__button" target="_blank">
-                                <i class="ri-shopping-bag-line button__icon"></i>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="products__card">
-                        <div class="products__content">
-                            <img src="assets/img/gold.png" alt="" class="products__img">
-                            <h3 class="products__title">Cash 100k</h3>
-                            <span class="products__price">$100</span>
-                            <a href="https://rfshadow.dpainel.shop/?add-to-cart=115" class="button button--flex products__button" target="_blank">
-                                <i class="ri-shopping-bag-line button__icon"></i>
-                            </a>
-                        </div>
-                    </article>
-                    <article class="products__card">
-                        <div class="products__content">
-                            <img src="assets/img/shop.png" alt="" class="products__img">
-                            <span class="products__price">Pacotes</span>
-                            <a href="https://rfshadow.dpainel.shop/" class="button button--flex products__button" target="_blank">
-                                <i class="ri-shopping-bag-line button__icon"></i>
-                            </a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-                             
-                </div>
-            </section>
-        </main>
+  <!-- Overlay escuro -->
+  <div class="overlay"></div>
 
-        <!--=============== FOOTER ===============-->
-        <footer class="footer">
-            <div class="footer__content container">
-                <div class="footer__left">
-                    <p class="footer__copy">
-                        <a href="" target="_blank" class="footer__copy-link">&#169;2024 RF Shadow. All rights reserved</a>
-                    </p>
-                    <div class="social-icons">
-                        <a href="https://facebook.com/rfshadow" target="_blank"><i class="ri-facebook-fill"></i></a>
-                        <a href="https://twitch.tv/joguerfshadow" target="_blank"><i class="ri-twitch-fill"></i></a>
-                        <a href="https://instagram.com/rfshadow" target="_blank"><i class="ri-instagram-fill"></i></a>
-                        <a href="https://discord.gg/rfshadow" target="_blank"><i class="ri-discord-fill"></i></a>
-                        <a href="https://discord.com/channels/@me/1128164223567016026/1251250674017243237" target="_blank"><i class="ri-whatsapp-fill"></i></a>
-                        <a href="mailto:contato@rfshadow.com"><i class="ri-mail-fill"></i></a>
-                    </div>
-                </div>
-                <div class="footer__right">
-                    <div class="footer__links">
-                    </div>
-                    <div class="footer__contact">
-                        <h3 class="footer__title">Entre em Contato</h3>
-                        <ul class="footer__contact-list">
-                            <li class="footer__contact-item"><i class="ri-mail-line footer__icon"></i> <a href="mailto:suporte@rfshadow.com" class="footer__contact-link">rfonlineshadow@gmail.com</a></li>
-                            <li class="footer__contact-item"><i class="ri-discord-line footer__icon"></i>rustyzada</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
-    <!--=============== SCROLL UP ===============-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="ri-arrow-up-line scrollup__icon"></i>
-    </a>
+  <!-- Conteúdo do Site -->
+  <header class="header">
+    <!-- Você pode adicionar navegação aqui -->
+  </header>
 
-    <!--=============== SCROLL REVEAL ===============-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+  <main class="hero">
+    <img src="imagens/RF SHADOW LOGO ROXA.png" alt="RF Shadow" class="hero__logo" />
+    <h1 class="hero__title">Em Breve ...</h1>
+    <p class="hero__subtitle">O lado sombrio do Rising Force Online</p>
+
+    <div class="button-group">
+      <a href="https://discord.gg/A8wp3U7VhA" class="button button--glow" target="_blank">Discord</a>
+      <a href="https://chat.whatsapp.com/GR9C6GVCFhqL2R4D4qTXRs" class="button button--glow" target="_blank">Grupo do Whatsapp</a>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    ScrollReveal().reveal('.hero__logo', { delay: 200, distance: '30px', origin: 'top' });
+    ScrollReveal().reveal('.hero__title', { delay: 400, distance: '30px', origin: 'left' });
+    ScrollReveal().reveal('.hero__subtitle', { delay: 600, distance: '30px', origin: 'right' });
+    ScrollReveal().reveal('.button-group', { delay: 800, distance: '30px', origin: 'bottom' });
+
+    tsParticles.load("particles-js", {
+      background: {
+        color: { value: "#0a0a0a" }
+      },
+      fpsLimit: 60,
+      particles: {
+        number: { value: 70 },
+        color: { value: "#a855f7" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1.2 }
+      },
+      detectRetina: true
+    });
+  </script>
 </body>
 </html>
