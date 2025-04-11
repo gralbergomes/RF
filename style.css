@@ -2,8 +2,7 @@
    FONTE & RESET
 ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -19,8 +18,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-  /* Suavizar fonte */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -51,55 +48,11 @@ body {
 }
 
 /* =========================
-   HEADER / NAVBAR
-========================= */
-.header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
-  z-index: 10;
-  padding: 12px 0;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
-}
-
-.nav__logo img {
-  height: 55px;
-}
-
-.nav__list {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.nav__link {
-  color: #b084f9;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s, text-shadow 0.3s;
-}
-
-.nav__link:hover,
-.nav__link.active-link {
-  color: #fff;
-  text-shadow: 0 0 10px #a855f7;
-}
-
-/* =========================
    HERO SECTION
 ========================= */
 .hero {
   flex: 1;
-  padding-top: 100px; /* espaço para o header */
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,6 +81,35 @@ body {
 .hero__subtitle {
   font-size: 1.2rem;
   color: #b084f9;
+}
+
+/* =========================
+   MUSIC PLAYER
+========================= */
+.music-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.music-button img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 10px #a855f7);
+}
+
+.music-button img:hover {
+  transform: scale(1.1);
+}
+
+.music-text {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #ddd;
+  font-family: Arial, sans-serif;
 }
 
 /* =========================
@@ -165,100 +147,241 @@ body {
 }
 
 /* =========================
-   MUSIC PLAYER
-========================= */
-.music-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.music-button img {
-  width: 55px;
-  height: 55px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.music-button img:hover {
-  transform: scale(1.1);
-}
-
-.music-text {
-  margin-top: 8px;
-  font-size: 16px;
-  color: #ddd;
-  font-family: Arial, sans-serif;
-}
-
-/* =========================
    FOOTER
 ========================= */
 .footer {
-  background-color: #000;
-  color: #aaa;
   text-align: center;
-  padding: 10px 0;
-  font-size: 14px;
-  font-family: Arial, sans-serif;
-  border-top: 1px solid #222;
-  margin-top: 30px;
+  font-size: 10px; /* Fonte pequena */
+  color: #777; /* Cinza delicado */
+  padding: 15px 0; /* Mais espaço vertical */
+  background: #000; /* Fundo preto */
+  position: relative;
+  margin-top: 15px; /* Empurra o footer bem pra baixo */
+  letter-spacing: 1px; /* Pequeno espaçamento nas letras */
+  width: 100%;
 }
 
-.footer__social a {
-  color: #a855f7;
-  margin: 0 8px;
-  font-size: 1.5rem;
-  transition: color 0.3s, text-shadow 0.3s;
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(15px);
+  padding: 12px 30px;
+  display: flex;
+  justify-content: center;
+  animation: slideDown 1s ease forwards;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer__social a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #a855f7;
+/* Animação da Navbar */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
+.navbar-container {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza no desktop */
+  position: relative;
+}
+
+.navbar-logo {
+  font-family: 'Audiowide', cursive;
+  font-size: 28px;
+  color: #a259ff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+  margin-right: auto;
+}
+
+.navbar-logo:hover {
+  color: #ffffff;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-menu li {
+  display: inline-block;
+}
+
+.navbar-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #a259ff;
+  transition: width 0.3s ease;
+  transform: rotate(0.5deg);
+  transform-origin: right;
+}
+
+.navbar-menu a:hover {
+  color: #a259ff;
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+  left: 0;
+  background: #a259ff;
+}
+
+/* Botão Hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  .nav__list {
+  .navbar-container {
+    justify-content: space-between;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(10, 10, 10, 0.95);
     flex-direction: column;
-    background: #111;
-    padding: 10px;
-    gap: 15px;
-    border-radius: 10px;
-    margin-top: 10px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    display: none;
   }
 
-  .hero__logo {
-    width: 220px;
+  .navbar-menu.active {
+    display: flex;
   }
 
-  .hero__title {
-    font-size: clamp(2rem, 6vw, 2.8rem);
+  .hamburger {
+    display: flex;
   }
+}
 
-  .button-group {
-    gap: 10px;
-  }
+/* Ajuste para o conteúdo não ficar atrás da navbar */
+.hero {
+  padding-top: 100px;
+}
+
+#countdown {
+  font-family: 'Audiowide', cursive;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 0 0 8px #a259ff, 0 0 16px #a259ff, 0 0 24px #a259ff;
+  letter-spacing: 2px;
 }
 
 .music-text {
-  font-size: 18px;
-  color: #c084fc;
-  font-family: 'Orbitron', sans-serif; /* Fonte bonita */
-  letter-spacing: 1px;
-  display: inline-block;
-  animation: sway-stronger 1.5s ease-in-out infinite;
+  color: #b84eff; /* Neon roxo */
+  text-shadow: 0 0 5px #b84eff, 0 0 10px #b84eff, 0 0 20px #b84eff; /* Efeito neon */
+  font-size: 16px;
+  margin-top: 10px;
+  animation: sacudir 0.8s infinite ease-in-out;
 }
 
-/* Animação com balanço maior */
-@keyframes sway-stronger {
-  0%   { transform: rotate(0deg); }
-  20%  { transform: rotate(10deg); }
-  40%  { transform: rotate(-10deg); }
-  60%  { transform: rotate(10deg); }
-  80%  { transform: rotate(-10deg); }
+/* Animação de sacudir mais forte */
+@keyframes sacudir {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(5deg); }
+  20% { transform: rotate(-5deg); }
+  30% { transform: rotate(5deg); }
+  40% { transform: rotate(-5deg); }
+  50% { transform: rotate(3deg); }
+  60% { transform: rotate(-3deg); }
+  70% { transform: rotate(2deg); }
+  80% { transform: rotate(-2deg); }
+  90% { transform: rotate(1deg); }
   100% { transform: rotate(0deg); }
+}
+
+/* Estilo geral da setinha */
+.arrow {
+  margin-left: 5px;
+  font-size: 10px;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  color: #ffffff;
+  text-shadow: 0 0 5px #a020f0, 0 0 10px #a020f0;
+}
+
+/* Quando passa o mouse, gira e brilha mais */
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+  color: #a020f0;
+  text-shadow: 0 0 10px #a020f0, 0 0 20px #a020f0;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  list-style: none;
+  padding: 10px 0;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(160, 32, 240, 0.5);
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  color: #a020f0;
+}
+
+/* Mostrar o menu ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
