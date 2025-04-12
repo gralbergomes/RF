@@ -221,6 +221,7 @@ body {
 
 .navbar-menu li {
   display: inline-block;
+  position: relative; /* Necessário para o dropdown */
 }
 
 .navbar-menu a {
@@ -385,3 +386,4 @@ body {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
