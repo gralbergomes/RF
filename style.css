@@ -299,6 +299,8 @@ body {
 
   .hamburger {
     display: flex;
+    margin-right: 22px;
+    margin-top: 30px;
   }
 }
 
