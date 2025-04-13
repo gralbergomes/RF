@@ -1,19 +1,9 @@
-// Música play/pause
-const musicButton = document.getElementById('musicButton');
-const playPauseBtn = document.getElementById('playPauseBtn');
-const backgroundMusic = document.getElementById('backgroundMusic');
 
-if (musicButton && playPauseBtn && backgroundMusic) {
-  musicButton.addEventListener('click', () => {
-    if (backgroundMusic.paused) {
-      backgroundMusic.play();
-      playPauseBtn.src = 'imagens/botao_musica_sem_fundo.png'; // Altere se quiser botão de "pause"
-    } else {
-      backgroundMusic.pause();
-      playPauseBtn.src = 'imagens/botao_musica_sem_fundo.png'; // Altere se quiser botão de "play"
-    }
-  });
-}
+// Armazenando o tempo da música enquanto ela toca
+backgroundMusic.addEventListener('timeupdate', () => {
+  localStorage.setItem('audioCurrentTime', backgroundMusic.currentTime);
+});
+
 
 // Particles.js (inicialização simples)
 tsParticles.load("particles-js", {
