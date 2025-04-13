@@ -93,3 +93,19 @@ document.querySelectorAll('.dropdown > a').forEach(dropdownToggle => {
     }
   });
 });
+
+// Função para abrir/fechar as boxes do tipo acordeão
+document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const item = header.parentElement;
+    const isOpen = item.classList.contains('open');
+
+    // Fecha todos os outros
+    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+
+    // Se não estava aberto, abre este
+    if (!isOpen) {
+      item.classList.add('open');
+    }
+  });
+});
