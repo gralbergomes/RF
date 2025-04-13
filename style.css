@@ -641,3 +641,43 @@ body {
   font-weight: bold;
   color: #fff;
 }
+
+/* Estilo para o botão de adicionar ao carrinho */
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px; /* Reduzido o espaçamento entre o botão e a tabela */
+  margin-bottom: 30px; /* Aumentado o espaçamento entre a tabela e a próxima */
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 10px 25px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button--glow {
+  background: #a855f7;
+  color: #fff;
+  box-shadow: 0 0 12px #a855f7, 0 0 24px #7e22ce;
+}
+
+.button--glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #c084fc, 0 0 30px #9333ea;
+}
+
+/* Para as tabelas */
+.dark-table {
+  margin-bottom: 50px; /* Aumentado o espaçamento entre tabelas */
+}
+
+
