@@ -109,3 +109,7 @@ document.querySelectorAll('.accordion-header').forEach(header => {
     }
   });
 });
+
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});

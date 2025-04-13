@@ -550,3 +550,94 @@ body {
 .accordion-item.open .accordion-header::after {
   content: " ▲"; /* Seta para indicar que a seção foi expandida */
 }
+
+/* Estilo para a seção de regras */
+.regras-container {
+  background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 40px auto;
+  color: #ddd; /* Cor do texto */
+  font-family: 'Roboto', sans-serif; /* Alterando a fonte para Roboto */
+}
+
+.regras-container p {
+  margin: 10px 0;
+}
+
+.regras-container p strong {
+  color: #9b59b6; /* Cor roxa para destacar os números */
+}
+
+.regras-container p::before {
+  content: "▫️ "; /* Marcador de ponto antes da regra */
+  color: #9b59b6;
+  font-size: 1.4rem;
+}
+
+.regras-container p:first-child {
+  margin-top: 0;
+}
+
+/* Estilo geral da tabela dark */
+.dark-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro e com transparência */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra mais forte */
+}
+
+.dark-table th, .dark-table td {
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Bordas mais sutis e discretas */
+  padding: 12px;
+  text-align: center;
+  color: #fff; /* Texto branco */
+  font-family: 'Arial', sans-serif; /* Fonte mais legível e moderna */
+}
+
+.dark-table th {
+  background-color: #6a1b9a; /* Cor roxa para o cabeçalho */
+  color: #fff;
+  font-weight: bold;
+}
+
+.dark-table tr:nth-child(even) {
+  background-color: rgba(50, 50, 50, 0.8); /* Fundo mais claro nas linhas pares */
+}
+
+.dark-table tr:nth-child(odd) {
+  background-color: rgba(25, 25, 25, 0.8); /* Fundo mais escuro nas linhas ímpares */
+}
+
+.dark-table tr:hover {
+  background-color: rgba(100, 100, 100, 0.8); /* Efeito de hover para destacar a linha */
+}
+
+.dark-table td {
+  font-size: 14px;
+}
+
+.dark-table th, .dark-table td {
+  border-radius: 5px;
+}
+
+.dark-table tr:hover td {
+  color: #fff; /* Texto branco no hover */
+}
+
+/* Estilo para a última linha de preços */
+.dark-table .price-row {
+  background-color: #9b59b6; /* Detalhes roxos para as células de preço */
+}
+
+.dark-table .price-row td {
+  font-weight: bold;
+  color: #fff;
+}
