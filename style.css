@@ -389,3 +389,57 @@ body {
   display: block;
 }
 
+/* DROPDOWN FUNCIONAL - NÃO REMOVE NADA DO ORIGINAL */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(10, 10, 10, 0.95);
+  min-width: 180px;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  z-index: 1001;
+  flex-direction: column;
+}
+
+.dropdown-menu li {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #a259ff;
+}
+
+/* DROPDOWN ATIVO PARA MOBILE */
+.dropdown-menu.active {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .dropdown-menu li {
+    padding: 8px 20px;
+  }
+}

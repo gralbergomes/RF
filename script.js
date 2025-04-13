@@ -3,20 +3,25 @@ const musicButton = document.getElementById('musicButton');
 const playPauseBtn = document.getElementById('playPauseBtn');
 const backgroundMusic = document.getElementById('backgroundMusic');
 
-musicButton.addEventListener('click', () => {
-  if (backgroundMusic.paused) {
-    backgroundMusic.play();
-    playPauseBtn.src = 'imagens/botao_musica_sem_fundo.png'; // Ícone quando toca
-  } else {
-    backgroundMusic.pause();
-    playPauseBtn.src = 'imagens/botao_musica_sem_fundo.png'; // Mesmo ícone, pode trocar
-  }
-});
+if (musicButton && playPauseBtn && backgroundMusic) {
+  musicButton.addEventListener('click', () => {
+    if (backgroundMusic.paused) {
+      backgroundMusic.play();
+      playPauseBtn.src = 'imagens/botao_musica_sem_fundo.png'; // Altere se quiser botão de "pause"
+    } else {
+      backgroundMusic.pause();
+      playPauseBtn.src = 'imagens/botao_musica_sem_fundo.png'; // Altere se quiser botão de "play"
+    }
+  });
+}
 
-// Particles.js
+// Particles.js (inicialização simples)
 tsParticles.load("particles-js", {
   particles: {
-    number: { value: 80, density: { enable: true, value_area: 800 } },
+    number: {
+      value: 80,
+      density: { enable: true, value_area: 800 }
+    },
     color: { value: "#a259ff" },
     shape: { type: "circle" },
     opacity: { value: 0.5 },
@@ -24,8 +29,12 @@ tsParticles.load("particles-js", {
     move: { enable: true, speed: 2 }
   },
   interactivity: {
-    events: { onhover: { enable: true, mode: "repulse" } },
-    modes: { repulse: { distance: 100 } }
+    events: {
+      onhover: { enable: true, mode: "repulse" }
+    },
+    modes: {
+      repulse: { distance: 100 }
+    }
   }
 });
 
@@ -58,7 +67,7 @@ function updateCountdown() {
   const distance = targetDate - now;
 
   if (distance < 0) {
-    countdown.innerHTML = "Lançado!";
+    if (countdown) countdown.innerHTML = "Lançado!";
     return;
   }
 
@@ -67,7 +76,20 @@ function updateCountdown() {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  if (countdown) {
+    countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
 }
 
 setInterval(updateCountdown, 1000);
+
+// Dropdown mobile: clique abre/fecha
+document.querySelectorAll('.dropdown > a').forEach(dropdownToggle => {
+  dropdownToggle.addEventListener('click', (e) => {
+    const dropdownMenu = dropdownToggle.nextElementSibling;
+    if (dropdownMenu) {
+      dropdownMenu.classList.toggle('active');
+      e.preventDefault(); // impede o clique de redirecionar
+    }
+  });
+});
