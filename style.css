@@ -680,3 +680,56 @@ body {
 }
 
 
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .octagon-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .octagon-container img {
+            width: 150px;  /* Ajuste o tamanho conforme necessário */
+        }
+
+        .custom-text {
+            color: #00FF00;  /* Cor do texto */
+            font-size: 20px;  /* Tamanho da fonte */
+            margin-top: 10px;
+        }
+    
+/* Container do octógono - versão corrigida */
+.octagon-container {
+    position: relative;
+    display: inline-block;
+    margin: 30px 0;
+    z-index: 1; /* Garante que fique acima do fundo */
+}
+
+.octagon-container img {
+    width: 180px; /* Aumentei um pouco para melhor visualização */
+    display: block;
+    filter: drop-shadow(0 0 10px #a855f7);
+}
+
+.move-text {
+    position: absolute;
+    top: 40px; /* Ajuste fino para posicionamento */
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #00FF00;
+    font-size: 22px;
+    font-family: 'Audiowide', cursive;
+    text-shadow: 0 0 8px #00FF00, 0 0 15px #00FF00;
+    font-weight: bold;
+    animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+    from { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00; }
+    to { text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF88; }
+}
